@@ -21,6 +21,7 @@ if(isset($_SESSION['username']))
     ShopFrek
   </title>
 </head>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 <!--Initialising css folders-->
 <link rel="stylesheet" href="assets/css/materialize.css">
 <!--Initialising javascript folders-->

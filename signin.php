@@ -101,6 +101,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login_username']) && is
 <!DOCTYPE html>
 <html>
 <head>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>ShopFreak|SignIn</title>
 <link rel="stylesheet" href="assets/css/materialize.css">
@@ -121,7 +122,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login_username']) && is
           <a href="accessories.php">Accessories</a>
         </li>
         <li>
-            <a href="signup.php">Sign Up</a>
+            <a href="register.php">Sign Up</a>
         </li>
       </ul>
     </div>
@@ -133,7 +134,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login_username']) && is
         <br><br>
         <h5 class="center">SING IN</h5>
         <div class="row">
-        	<div class="col offset-s2 s8">
+        	<div class="col s12 offset-m1 m10 offset-l2 l8">
                 <div class="form-group">
                 	<div class="input-group">
                     <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
@@ -155,7 +156,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login_username']) && is
     </form>
     </div>
 </div>
-<footer class="page-footer grey darken-3" style="margin-top:185px;">
+<footer class="page-footer blue accent-4" style="margin-top:185px;">
 	<div class="container">
 		<div class="row">
 			<div class="col l2 offset-l1">
@@ -169,7 +170,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login_username']) && is
 			</div>
 		</div>
 	<div class="footer-copyright">
-		<div class="center" style="margin-left:35%">Indian Society for Technical Education (VITU) &copy; 2016 Copyright</div>
+		<div class="center" style="margin-left:35%">Developed by Vedant Jain</div>
 	</div>
 	</div>
 </footer>

@@ -55,73 +55,73 @@ if(isset($_SESSION['username']))
 		ShopFreak
 	</title>
 </head>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 <!--Initialising css folders-->
-<link rel="stylesheet" href="css/materialize.css">
+<link rel="stylesheet" href="assets/css/materialize.css">
 <!--Initialising javascript folders-->
-<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="js/materialize.js"></script>
-<script type="text/javascript" src="js/materialize.min.1.js"></script>
+<script type="text/javascript" src="assets/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="assets/js/materialize.js"></script>
 <!--Initialising icon font-->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <!--Styling header tags-->
 <style>
-h1,h2,h3,h4,h5,h6{
-font-family:Freestyle Script
+body{
+  font-family: 'Lato', sans-serif;
 }
 </style>
 <!--Initialisations end-->
 <body>
-  <div id="upar" class="scrollspy" ></div>
-  <nav>
-    <div class="col s12 m12 l12 nav-wrapper black">
-      <a href="landing.html" class="brand-logo"><img src="img/ISTE.png" style="width:60px; height:60px;"></a>
+  <nav class="blue accent-4">
+    <div class="container">
+    <div class="col s12 m12 l12 nav-wrapper blue accent-4">
+      <a href="index.php" class="brand-logo">ShopFreak</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-	    <li><div style="width:700px"><img src="img/SFREAK.png" style="height:70px;"></div></li>
         <li>
-        	<?php 
-        		if (isset($_SESSION['username'])) { ?>
-        			<a href=""><?php echo $first_name." ".$last_name; ?></a>
-        	<?php } else { ?>
-        			<a href="signin.php">Login</a>
-        	<?php } ?>
-        	
+          <a href="retailer.php">Pending Orders</a>
         </li>
-		<li>
-			<?php 
-        		if (isset($_SESSION['username'])) { ?>
-        			<a href="logout.php">Logout</a>
-        	<?php } else { ?>
-        			<a href="register.php">Sign Up</a>
-        	<?php } ?>
-		</li>
+        <li>
+          <?php 
+            if (isset($_SESSION['username'])) { ?>
+              <a href=""><?php echo $first_name." ".$last_name; ?></a>
+          <?php } else { ?>
+              <a href="signin.php">Login</a>
+          <?php } ?>
+          
+        </li>
+    <li>
+      <?php 
+            if (isset($_SESSION['username'])) { ?>
+              <a href="logout.php">Logout</a>
+          <?php } else { ?>
+              <a href="register.php">Sign Up</a>
+          <?php } ?>
+    </li>
       </ul>
     </div>
+  </div>
   </nav>
   <div class="container">
 	  <div class="row">
-	  	<div class="col s12 m12 l12">
-	  		<h3>Add Products for Sale</h3>
+	  	<br>
+	  	<div class="col s12 m12 offset-l1 l10">
+	  		<h4>Add Products for Sale</h4>
 	  		<form method="POST" action="addproduct.php" class="col s12" enctype="multipart/form-data">
 		      <div class="row">
-		        <div class="input-field col s12">
+		        <div class="input-field col s6">
 		          <input name="name" id="name" type="text" class="validate">
 		          <label for="name">Product Name</label>
 		        </div>
-		        <div class="input-field col s12">
+		        <div class="input-field col s6">
 		          <input name="company" id="company" type="text" class="validate">
 		          <label for="company">Company Name</label>
 		        </div>
-		        <div class="input-field col s12">
+		        <div class="input-field col s6">
 		          <input name="price" id="price" type="text" class="validate">
 		          <label for="price">Price</label>
 		        </div>
-                <div class="input-field col s12">
-				  <textarea name="description" id="description" class="materialize-textarea"></textarea>
-				  <label for="description">Product Description</label>
-				</div>
-				<div class="file-field input-field col s12">
-			      <div class="btn">
+		        <div class="file-field input-field col s6">
+			      <div class="btn blue accent-4">
 			        <span>File</span>
 			        <input name="image" type="file">
 			      </div>
@@ -129,6 +129,10 @@ font-family:Freestyle Script
 			        <input class="file-path validate" type="text">
 			      </div>
 			    </div>
+                <div class="input-field col s12">
+				  <textarea name="description" id="description" class="materialize-textarea"></textarea>
+				  <label for="description">Product Description</label>
+				</div>
 				<p><b>Select Product Type:</b></p>
 				<p class="col s3">
 			      <input name="type" type="radio" id="test1" value="mtshirt" />
@@ -180,7 +184,7 @@ font-family:Freestyle Script
 			    </p>
 		      </div>
 		      <center>
-		      	  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+		      	  <button class="btn waves-effect waves-light blue accent-4" type="submit" name="action">Submit
 				    <i class="material-icons right">send</i>
 				  </button>
 		      </center>
@@ -188,7 +192,7 @@ font-family:Freestyle Script
 	  	</div>
 	  </div>
   </div>
-  <footer class="page-footer grey darken-3">
+  <footer class="page-footer blue accent-4">
           <div class="container">
             <div class="row">
               <div class="col l2 offset-l1">
@@ -202,7 +206,7 @@ font-family:Freestyle Script
               </div>
             </div>
 			<div class="footer-copyright">
-            <div class="center" style="margin-left:35%">Indian Society for Technical Education (VITU) &copy; 2016 Copyright</div>
+            <div class="center" style="margin-left:35%">Developed by Vedant Jain</div>
           </div>
 			</div>			
           </div>

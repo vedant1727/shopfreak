@@ -111,90 +111,98 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register_password']) &&
 <!DOCTYPE html>
 <html>
 <head>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>ShopFreak|SignUp</title>
-<link rel="stylesheet" href="css/materialize.css">
-<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="assets/css/materialize.css">
 </head>
 <body>
-	<div id="upar" class="scrollspy" ></div>
-  <nav>
-    <div class="col s12 m12 l12 nav-wrapper black">
-      <a href="landing.html" class="brand-logo"><img src="img/ISTE.png" style="width:60px; height:60px;"></a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-	    <li><div style="width:900px"><img src="img/SFREAK.png" style="height:70px;"></div></li>
-      </ul>
+  <nav class="blue accent-4">
+    <div class="container">
+        <div class="col s12 m12 l12 nav-wrapper blue accent-4">
+          <a href="index.php" class="brand-logo">ShopFreak</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li>
+              <a href="mens.php">Men</a>
+            </li>
+            <li>
+              <a href="women.php">Women</a>
+            </li>
+            <li>
+              <a href="accessories.php">Accessories</a>
+            </li>
+            <li>
+                <a href="signin.php">Login</a>
+            </li>
+          </ul>
+        </div>
     </div>
   </nav>
 
 <div class="container">
-
 	<div id="login-form">
     <form method="post" action="register.php" autocomplete="off">
-
-    	<div class="col-l12">
-        	<div class="form-group">
-            	<h2>Sign Up</h2>
-            </div>
+    	<div class="container">
+            <br>
+            <h5 class="center">SIGN UP</h5>
 			<br>
             <div class="row">
-		        <div class="input-field col s12 m6 l6">
+		        <div class="input-field col s6 offset-m1 m5 offset-l1 l5">
 		          <input name="first_name" id="first_name" type="text" class="validate" required>
 		          <label for="first_name">First Name</label>
 		        </div>
-		        <div class="input-field col s12 m6 l6">
+		        <div class="input-field col s12 m5 l5">
 		          <input name="last_name" id="last_name" type="text" class="validate" required>
 		          <label for="last_name">Last Name</label>
 		        </div>
-		        <div class="input-field col s12">
+		        <div class="input-field col s12 offset-m1 m10 offset-l1 l10">
 		          <input name="register_username" id="email" type="email" class="validate" required>
 		          <label for="email">Email</label>
 		        </div>
-		        <div class="input-field col s12">
+		        <div class="input-field col s12 offset-m1 m10 offset-l1 l10">
 		          <input name="register_password" id="password" type="password" class="validate" required>
 		          <label for="password">Password</label>
 		        </div>
-		        <div class="input-field col s12">
+		        <div class="input-field col s12 offset-m1 m10 offset-l1 l10">
 		          <input name="address" id="address" type="text" class="validate" required>
 		          <label for="address">Address</label>
 		        </div>
-		        <div class="input-field col s12">
+		        <div class="input-field col s12 offset-m1 m10 offset-l1 l10">
 		          <input name="type" id="type" type="text" class="validate" required>
 		          <label for="type">Account Type</label>
 		        </div>
 	     	</div>
 			<br>
-            <center><div class="form-group">
-            	<button type="submit" class="btn btn-block btn-primary" name="btn-signup">Sign Up</button>
-            </div></center>
-			<br>
+            <center>
+                <div class="form-group">
+            	   <button type="submit" class="btn btn-block btn-primary blue accent-4" name="btn-signup">Sign Up</button>
+                </div>
+            </center>
         </div>
     </form>
     </div>
 </div>
-
-
-
-<footer class="page-footer grey darken-3" style="margin-top:10px;">
-				<div class="container">
-					<div class="row">
-						<div class="col l2 offset-l1">
-							<h5 class="white-text">Digital Partner</h5>
-			<img src="img/adobe.png" width="50px" height="50px">
-			<img src="img/bahwan.jpg" width="50px" height="50px">
-						</div>
-						<div class="col l2 offset-l6">
-							<h5 class="white-text">Media Partner</h5>
-			<img src="img/beepweep.png" width="100px" height="50px">
-						</div>
-					</div>
-		<div class="footer-copyright">
-					<div class="center" style="margin-left:35%">Indian Society for Technical Education (VITU) &copy; 2016 Copyright</div>
-				</div>
-		</div>
-				</div>
-	</footer>
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/materialize.js"></script>
+<br>
+<br>
+<footer class="page-footer blue accent-4">
+    <div class="container">
+        <div class="row">
+            <div class="col l2 offset-l1">
+                <h5 class="white-text">Digital Partner</h5>
+                <img src="img/adobe.png" width="50px" height="50px">
+                <img src="img/bahwan.jpg" width="50px" height="50px">
+            </div>
+            <div class="col l2 offset-l6">
+                <h5 class="white-text">Media Partner</h5>
+                <img src="img/beepweep.png" width="100px" height="50px">
+            </div>
+        </div>
+    <div class="footer-copyright">
+        <div class="center" style="margin-left:35%">Developed by Vedant Jain</div>
+    </div>
+    </div>
+</footer>
+  <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/materialize.js"></script>
 </body>
 </html>

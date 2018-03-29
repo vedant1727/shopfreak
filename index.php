@@ -150,7 +150,7 @@ body{
               </div>
             </div>
 			<div class="footer-copyright">
-            	<div class="center" style="margin-left:35%">Indian Society for Technical Education (VITU) &copy; 2016 Copyright</div>
+            	<div class="center" style="margin-left:35%">Developed by Vedant Jain</div>
           	</div>
 			</div>
     </footer>

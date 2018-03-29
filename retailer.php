@@ -23,19 +23,20 @@ if(isset($_SESSION['username']))
 		ShopFreak
 	</title>
 </head>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 <!--Initialising css folders-->
-<link rel="stylesheet" href="css/materialize.css">
+<link rel="stylesheet" href="assets/css/materialize.css">
 <!--Initialising javascript folders-->
-<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="js/materialize.js"></script>
-<script type="text/javascript" src="js/materialize.min.1.js"></script>
+<script type="text/javascript" src="assets/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="assets/js/materialize.js"></script>
+<script type="text/javascript" src="assets/js/materialize.min.1.js"></script>
 <!--Initialising icon font-->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <!--Styling header tags-->
 <style>
-h1,h2,h3,h4,h5,h6{
-font-family:Freestyle Script
+body{
+  font-family: 'Lato', sans-serif;
 }
 
 .card.horizontal .card-image{
@@ -55,44 +56,43 @@ font-family:Freestyle Script
 
 .card-content p>span{
   font-weight: 700;
-  color: #F44336 !important;
+  color: #3f51b5 !important;
 }
 </style>
 <!--Initialisations end-->
 <body>
-  <div id="upar" class="scrollspy" ></div>
-  <nav class="black">
-  	<div class="container">
-    <div class="col s12 m12 l12 nav-wrapper black">
-      <a href="landing.html" class="brand-logo"><b>ShopFreak</b></a>
+  <nav class="blue accent-4">
+    <div class="container">
+    <div class="col s12 m12 l12 nav-wrapper blue accent-4">
+      <a href="index.php" class="brand-logo">ShopFreak</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-	    <li>
-	    	<a href="addproduct.php">Add Products</a>
-	    </li>
         <li>
-        	<?php 
-        		if (isset($_SESSION['username'])) { ?>
-        			<a href=""><?php echo $first_name." ".$last_name; ?></a>
-        	<?php } else { ?>
-        			<a href="signin.php">Login</a>
-        	<?php } ?>
-        	
+          <a href="addproduct.php">Add Product</a>
         </li>
-		<li>
-			<?php 
-        		if (isset($_SESSION['username'])) { ?>
-        			<a href="logout.php">Logout</a>
-        	<?php } else { ?>
-        			<a href="register.php">Sign Up</a>
-        	<?php } ?>
-		</li>
+        <li>
+          <?php 
+            if (isset($_SESSION['username'])) { ?>
+              <a href=""><?php echo $first_name." ".$last_name; ?></a>
+          <?php } else { ?>
+              <a href="signin.php">Login</a>
+          <?php } ?>
+          
+        </li>
+    <li>
+      <?php 
+            if (isset($_SESSION['username'])) { ?>
+              <a href="logout.php">Logout</a>
+          <?php } else { ?>
+              <a href="register.php">Sign Up</a>
+          <?php } ?>
+    </li>
       </ul>
     </div>
-	</div>
+  </div>
   </nav>
   <div class="container">
 	  <div class="row">
-	  	<h3>Orders to Deliver:</h3>
+	  	<h4>Orders to Deliver</h4>
 
         <?php
         $orders="SELECT * FROM orders WHERE rid = '".$rid."'";
@@ -126,7 +126,7 @@ font-family:Freestyle Script
 
 	  </div>
   </div>
-  <footer class="page-footer grey darken-3">
+  <footer class="page-footer blue accent-4">
           <div class="container">
             <div class="row">
               <div class="col l2 offset-l1">
@@ -140,7 +140,7 @@ font-family:Freestyle Script
               </div>
             </div>
 			<div class="footer-copyright">
-            <div class="center" style="margin-left:35%">Indian Society for Technical Education (VITU) &copy; 2016 Copyright</div>
+            <div class="center" >Developed by Vedant Jain</div>
           </div>
 			</div>			
           </div>
